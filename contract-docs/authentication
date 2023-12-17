@@ -1,0 +1,41 @@
+- add a user
+
+	Url: baseUrl/api/auth
+
+	Method: POST
+
+	body: {
+		userName: string,
+		gmail: string,
+		password: string,
+	}
+
+	Response: {
+		userName: string,
+		gmail: string
+	}
+
+- username check
+
+	Url: baseUrl/api/auth/:userName/userName
+
+	Method: GET
+
+	Response: boolean
+
+- login a user
+
+	Url: baseUrl/api/auth/login
+
+	Method: POST
+	/* Note: either userName or gmail is required */
+	body: {
+		userName?: string,
+		gmail?: string,
+		password: string
+	}
+
+	Response: {
+		userName: string,
+		gmail: string
+	}
